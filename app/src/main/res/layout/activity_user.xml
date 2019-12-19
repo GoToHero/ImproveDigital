@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/user_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Your Data"
+            app:titleTextColor="@color/whiteColor"
+            app:navigationIcon="@drawable/ic_arrow_back_24px"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_photo_camera_24px"
+            android:scaleType="centerCrop"
+            android:elevation="4dp"/>
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/mail_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_mail_24px"/>
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@id/mail_icon"
+                android:layout_toRightOf="@id/mail_icon"
+                android:layout_centerVertical="true"
+                android:id="@+id/mail_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="myemail@mail.com"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/phone_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_phone_24px"/>
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@id/phone_icon"
+                android:layout_toRightOf="@id/phone_icon"
+                android:layout_centerVertical="true"
+                android:id="@+id/phone_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="myemail@mail.com"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/access_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_build_24px"/>
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@id/access_icon"
+                android:layout_toRightOf="@id/access_icon"
+                android:layout_centerVertical="true"
+                android:id="@+id/password_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="myemail@mail.com"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_by_email_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/colorPrimary"
+        android:fitsSystemWindows="false"
+        android:text="SEND BY EMAIL"
+        android:textColor="@color/whiteColor" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
